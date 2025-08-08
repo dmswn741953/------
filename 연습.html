@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>iMac Hover Scroll</title>
+    <style>
+      .pc-wrap {
+        position: relative;
+        width: 643px;
+        height: 520px;
+        background: url("./images/pc.png") no-repeat center/contain;
+        margin: 50px auto;
+      }
+
+      .screen {
+        position: absolute;
+        top: 34px;
+        left: 115px;
+        width: 412px;
+        height: 322px;
+        overflow: hidden;
+        border-radius: 4px;
+      }
+
+      .hankook-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 412px;
+        height: auto;
+        transition: transform 3s ease-in-out;
+      }
+
+      .screen:hover .hankook-img {
+        transform: translateY(
+          -1726px
+        ); /* 2048px (전체 높이) - 322px (보이는 높이) */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pc-wrap">
+      <div class="screen">
+        <img
+          src="./images/hankook_PC.png"
+          alt="Hankook Website"
+          class="hankook-img"
+        />
+      </div>
+    </div>
+  </body>
+</html>
