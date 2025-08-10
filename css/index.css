@@ -21,6 +21,7 @@
 }
 html {
   font-size: 16px;
+  box-sizing: border-box;
 }
 ul {
   list-style: none;
@@ -76,6 +77,10 @@ ul {
   position: absolute;
   font-family: "Machinkly";
   top: 0;
+}
+.main ul li {
+  flex: 1 1;
+  color: #858484;
 }
 .content {
   height: 100vh;
@@ -263,35 +268,35 @@ ul {
   line-height: 30px;
   word-break: keep-all;
 }
-#section3 .swiper-slide {
+.Project .swiper-slide {
   display: flex;
   padding: 55px 70px;
   gap: 190px;
   box-sizing: border-box;
 }
-#section3 .swiper-slide > p {
+.Project .swiper-slide > p {
   width: 784px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#section3 .swiper-slide > p img {
+.Project .swiper-slide > p img {
   width: 100%;
   vertical-align: middle;
   border: 1px solid #b3b3b3b7;
 }
-#section3 .swiper-slide > div {
+.Project .swiper-slide > div {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-#section3 .swiper-slide > div .mall_tit h1 {
+.Project .swiper-slide > div .pr_No h1 {
   position: relative;
   padding: 90px 0 0 220px;
   font-family: "Ghanachocolate";
   font-weight: 500;
 }
-#section3 .swiper-slide > div .mall_tit h1::before {
+#section3 .swiper-slide > div .pr_No h1::before {
   position: absolute;
   content: url(../images/hankookmall_bg.jpg);
   width: 454px;
@@ -300,7 +305,7 @@ ul {
   left: -30px;
   z-index: -1;
 }
-#section3 .swiper-slide > div .mall_tit h1::after {
+#section3 .swiper-slide > div .pr_No h1::after {
   position: absolute;
   content: "한국도자기";
   width: 170px;
@@ -308,36 +313,56 @@ ul {
   top: 140px;
   right: 150px;
 }
-#section3 .swiper-slide > div .mall_txt {
+.Project .swiper-slide > div .txt {
   position: relative;
   bottom: 0;
   font-family: "Pretendard_SemiBold";
   padding-bottom: 50px;
 }
-#section3 .swiper-slide > div .mall_txt p:first-child {
+.Project .swiper-slide > div .txt > div:first-child {
   font-size: 26px;
 }
-#section3 .swiper-slide > div .mall_txt p:nth-child(2) {
+.Project .swiper-slide > div .txt > div:first-child p:first-child {
+  position: relative;
+}
+.Project .swiper-slide > div .txt > div:first-child p:first-child::after {
+  position: absolute;
+  content: "";
+  width: 12px;
+  height: 33px;
+  left: -20px;
+  background: #f6f0ab;
+}
+.Project .swiper-slide > div .txt .red {
   font-size: 24px;
   color: #cf2f2f;
   padding-bottom: 80px;
 }
-#section3 .swiper-slide > div .mall_txt p:nth-child(3),
-#section3 .swiper-slide > div .mall_txt p:nth-child(4) {
+.Project .swiper-slide > div .txt .time p {
   font-size: 22px;
 }
-#section3 .swiper-slide > div .mall_txt p span {
+.Project .swiper-slide > div .txt .time p span {
   color: #c2b200;
 }
 .info_wrap {
   display: flex;
   gap: 400px !important;
+  font-size: 24px;
+  font-family: "Pretendard_SemiBold";
 }
 .info > div {
   display: flex;
 }
 .info > div > p:first-child {
   width: 200px;
+  color: #c2b200;
+  font-weight: 500;
+}
+.info .title p:nth-child(2) {
+  width: 300px;
+}
+.info .title p:nth-child(2) img {
+  width: 100%;
 }
 .concept_txt > div {
   display: flex;
@@ -347,8 +372,8 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100px;
-  height: 100px;
+  width: 130px;
+  height: 130px;
   border: 1px solid #000;
   border-radius: 50%;
   text-align: center;
@@ -361,11 +386,28 @@ ul {
   display: flex;
   text-align: center;
 }
-
+.typho_txt li p:first-child {
+  padding-bottom: 23px;
+  position: relative;
+}
+.typho_txt li p:first-child::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  left: 0;
+  bottom: 10px;
+  background: #ccc;
+}
+.typho_txt li:first-child {
+  margin-right: 40px;
+}
 .color > div {
   display: flex;
 }
-
+.device {
+  padding-right: 50px;
+}
 .pc-wrap {
   position: relative;
   width: 503px;
@@ -392,7 +434,7 @@ ul {
   transition: transform 3s ease-in-out;
 }
 
-.screen:hover img {
+#section3 .screen:hover img {
   transform: translateY(-1726px); /* 2048px (전체 높이) - 322px (보이는 높이) */
 }
 .mobile {
@@ -449,4 +491,31 @@ ul {
 }
 .screen-phone:hover img {
   transform: translateY(-1435px);
+}
+#section4 {
+  background: #0a1e5a;
+  color: #fff;
+}
+#section4 .swiper-slide > div .pr_No h1::before {
+  position: absolute;
+  content: url(../images/LSmtron_bg.jpg);
+  width: 454px;
+  height: 338px;
+  top: -50px;
+  left: -85px;
+  z-index: -1;
+}
+#section4 .swiper-slide > div .pr_No h1::after {
+  position: absolute;
+  content: "LS Mtron";
+  width: 170px;
+  font-size: 32px;
+  top: 140px;
+  right: -40px;
+}
+#section4 .concept_txt > div span {
+  border: 1px solid #fff;
+}
+#section4 .screen:hover img {
+  transform: translateY(-1515px); /* 2048px (전체 높이) - 322px (보이는 높이) */
 }
