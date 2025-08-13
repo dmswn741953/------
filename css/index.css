@@ -18,10 +18,10 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 html {
   font-size: 16px;
-  box-sizing: border-box;
 }
 ul {
   list-style: none;
@@ -81,13 +81,15 @@ ul {
 .main ul li {
   flex: 1 1;
   color: #858484;
+  text-align: center;
 }
 .content {
-  height: 100vh;
-  display: flex;
-  align-items: center;
   box-sizing: border-box;
   font-family: "BASKVILL";
+}
+.fp-tableCell {
+  display: flex !important;
+  align-items: center;
 }
 .content div {
   flex: 50%;
@@ -96,7 +98,7 @@ ul {
   color: #858484;
 }
 .content div:first-child p {
-  font-size: 54px;
+  font-size: 68px;
 }
 .content div:nth-child(2) ul:first-child {
   margin-bottom: 167px;
@@ -313,6 +315,10 @@ ul {
   top: 140px;
   right: 150px;
 }
+.link a {
+  color: #000;
+}
+
 .Project .swiper-slide > div .txt {
   position: relative;
   bottom: 0;
@@ -338,11 +344,15 @@ ul {
   color: #cf2f2f;
   padding-bottom: 80px;
 }
-.Project .swiper-slide > div .txt .time p {
+.Project .swiper-slide > div .txt .time > ul {
+  display: flex;
+}
+.Project .swiper-slide > div .txt .time > ul li {
   font-size: 22px;
 }
-.Project .swiper-slide > div .txt .time p span {
+.Project .swiper-slide > div .txt .time > ul li:first-child {
   color: #c2b200;
+  width: 100px;
 }
 .info_wrap {
   display: flex;
@@ -404,6 +414,7 @@ ul {
 }
 .color > div {
   display: flex;
+  gap: 10px;
 }
 .device {
   padding-right: 50px;
@@ -518,4 +529,99 @@ ul {
 }
 #section4 .screen:hover img {
   transform: translateY(-1515px); /* 2048px (전체 높이) - 322px (보이는 높이) */
+}
+#section4 .link a {
+  color: #fff;
+}
+#section4 .swiper-slide > div .pr_No h1 {
+  position: relative;
+}
+
+#section5 {
+  background: #efb673;
+}
+#section5 .swiper-slide > div .pr_No h1 {
+  position: relative;
+}
+#section5 .swiper-slide > div .pr_No h1::after {
+  position: absolute;
+  content: "뚜레쥬르(Tous les Jours)";
+  width: 450px;
+  font-size: 32px;
+  top: 140px;
+  right: -320px;
+}
+#section5 .swiper-slide > div .pr_No h1::before {
+  position: absolute;
+  content: url(../images/tj_bg.png);
+  width: 454px;
+  height: 338px;
+  top: -50px;
+  left: 45px;
+  z-index: -1;
+}
+
+#section5 .swiper-slide > div .txt .time > ul li:first-child {
+  color: #0e4832;
+}
+#section5 .info > div > p:first-child {
+  color: #0e4832;
+}
+#section5 .info_wrap {
+  gap: 250px !important;
+}
+
+#section5 .concept_txt > div span {
+  background-color: #f4e0b7;
+}
+#section5 .typho_txt li p:first-child::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  left: 0;
+  bottom: 10px;
+  background: #d6dad8;
+}
+#section5 .screen:hover img {
+  transform: translateY(-890px); /* 2048px (전체 높이) - 322px (보이는 높이) */
+}
+#section5 .screen_talet:hover img {
+  transform: translateY(-620px);
+}
+#section5 .screen-phone:hover img {
+  transform: translateY(-1025px);
+}
+.last {
+  background: url(../images/last_bg.jpg) center/cover no-repeat;
+}
+.last .mySwiper4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.mySwiper4 h1 {
+  font-family: "Machinkly";
+  letter-spacing: 0.05em;
+  text-shadow: -7px 7px 5px #818e93;
+  color: #fff;
+  font-size: 150px;
+}
+
+.last_txt li {
+  display: flex;
+  font-size: 24px;
+  font-family: "Pretendard_SemiBold";
+}
+.last_txt li span {
+  display: block;
+  width: 150px;
+}
+.last_txt li:last-child {
+  margin-top: 30px;
+  color: #666666;
+}
+.myPage {
+  color: #000;
 }
